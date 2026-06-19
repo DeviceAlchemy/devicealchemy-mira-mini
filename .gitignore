@@ -1,0 +1,25 @@
+# Model weights and checkpoints
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.model
+pretrain_output/
+chat_output/
+model_export*/
+merged_hf/
+
+# Data
+data/
+raw/
+*.txt
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+gguf_convert_env/
+
+# OS
+.DS_Store
