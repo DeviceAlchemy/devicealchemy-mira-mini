@@ -46,7 +46,7 @@ has no attribute 'keys'` during llama.cpp GGUF conversion.
 
 ## Training data
 
-Opely licensed (CC BY) scientific text dataset containing 120 million words.
+Openly licensed (CC BY) scientific text dataset containing 120 million words.
 
 ## License
 
