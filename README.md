@@ -52,7 +52,7 @@ devices, and related engineering domains.
 
 ## License
 
-[Add your license here — e.g. MIT, Apache 2.0]
+[Apache 2.0]
 
 ## Author
 
