@@ -12,19 +12,19 @@ Run in order:
 
 ```bash
 # 1. Clean and split raw abstracts into train/val
-python step1_prepare.py --input /path/to/abstracts.txt --output_dir ./data
+python step1_mira_prepare.py --input /path/to/abstracts.txt --output_dir ./data
 
 # 2. Continued pre-training (unsupervised) on the abstracts
-python step2_train.py --data_dir ./data --output_dir ./pretrain_output
+python step2_mira_train.py --data_dir ./data --output_dir ./pretrain_output
 
 # 3. Chat fine-tuning (Q&A pairs generated from abstracts + identity pairs)
-python step3_finetune.py \
+python step3_mira_finetune.py \
   --pretrain_adapter ./pretrain_output/pretrain_adapter \
   --abstracts /path/to/abstracts.txt \
   --output_dir ./chat_output
 
 # 4. Merge adapters and export to GGUF for Ollama
-python MIRA_step4_export.py --adapter_path ./chat_output/final_adapter --output_dir ./model_export
+python step4_mira_export.py --adapter_path ./chat_output/final_adapter --output_dir ./model_export
 ```
 
 Step 4 requires [llama.cpp](https://github.com/ggerganov/llama.cpp) cloned locally for
