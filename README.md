@@ -1,4 +1,4 @@
-# MIRA — Materials Intelligence and Reasoning Agent
+# MIRA mini v1.0 — Materials Intelligence and Reasoning Agent
 
 Training pipeline for MIRA, a Qwen2.5-1.5B-Instruct model fine-tuned via QLoRA on
 materials science journal abstracts. Developed by DeviceAlchemy LLC.
@@ -12,13 +12,13 @@ Run in order:
 
 ```bash
 # 1. Clean and split raw abstracts into train/val
-python MIRA_step1_prepare_pretrain.py --input /path/to/abstracts.txt --output_dir ./data
+python step1_prepare.py --input /path/to/abstracts.txt --output_dir ./data
 
 # 2. Continued pre-training (unsupervised) on the abstracts
-python MIRA_step2_pretrain.py --data_dir ./data --output_dir ./pretrain_output
+python step2_train.py --data_dir ./data --output_dir ./pretrain_output
 
 # 3. Chat fine-tuning (Q&A pairs generated from abstracts + identity pairs)
-python MIRA_step3_chat_finetune.py \
+python step3_finetune.py \
   --pretrain_adapter ./pretrain_output/pretrain_adapter \
   --abstracts /path/to/abstracts.txt \
   --output_dir ./chat_output
