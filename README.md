@@ -46,9 +46,7 @@ has no attribute 'keys'` during llama.cpp GGUF conversion.
 
 ## Training data
 
-Scientific paper abstracts from Gold Open Access journals (CC BY 4.0 or equivalent
-permissive licenses), spanning condensed matter physics, materials science, electronic
-devices, and related engineering domains.
+Opely licensed (CC BY) scientific text dataset containing 120 million words.
 
 ## License
 
